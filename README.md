@@ -1,13 +1,13 @@
 # MeetingScribe
 
-Transcribe meeting recordings entirely on your own Mac, with speaker labels. Drop in an audio or video file and get a formatted meeting transcript — speaker turns (Speaker 1, Speaker 2, …), timestamps, clean plain text, and subtitles.
+Transcribe meeting recordings entirely on your own Mac, with speaker labels. Drop in an audio or video file and get a formatted meeting transcript, speaker turns (Speaker 1, Speaker 2, …), timestamps, clean plain text, and subtitles.
 
 Transcription runs locally with OpenAI's Whisper model (via [faster-whisper](https://github.com/SYSTRAN/faster-whisper)); speaker diarization runs locally with [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx). No cloud, no API keys, no accounts.
 
 <!-- Add a screenshot named screenshot.png to this folder and it will show up here -->
 <!-- ![MeetingScribe](screenshot.png) -->
 
-## Privacy — what talks to the internet
+## Privacy, what talks to the internet
 
 Nothing sends your audio anywhere. There are no APIs, accounts, or keys. The only network activity is a one-time download of open-source model weights: the Whisper model you pick (from Hugging Face's public CDN) and two small speaker-ID models (~45 MB, from GitHub). After that you can turn Wi-Fi off and it keeps working. Recordings, transcripts, and everything in between stay on your Mac.
 
@@ -29,7 +29,7 @@ After the first time, just **double-click Start MeetingScribe.command** — a te
 
 Drag a recording onto the drop zone (m4a, mp3, wav, aac, flac, mp4, mov and most other formats — video files work, it uses the audio track), pick a model, and hit Transcribe. Keep the terminal window open while it runs.
 
-**Speaker labels** are on by default. If you know how many people were in the meeting, set the speaker count — it's noticeably more accurate than auto-detect. Labels are "Speaker 1/2/3" in order of first appearance; find-and-replace with real names afterwards. Diarization works best with decent audio and distinct voices; heavy crosstalk or one laptop mic across a big conference room will blur it.
+**Speaker labels** are on by default. If you know how many people were in the meeting, set the speaker count, it's noticeably more accurate than auto-detect. Labels are "Speaker 1/2/3" in order of first appearance; find-and-replace with real names afterwards. Diarization works best with decent audio and distinct voices; heavy crosstalk or one laptop mic across a big conference room will blur it.
 
 **Models:** small is the sweet spot for meetings; large-v3-turbo is noticeably better on crosstalk and jargon if you don't mind ~1.6 GB and slower runs; base for quick rough drafts.
 
@@ -73,4 +73,4 @@ Delete this folder and `~/Documents/MeetingScribe/`. Whisper models cache in `~/
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Built on faster-whisper (MIT), sherpa-onnx (Apache-2.0), and OpenAI Whisper (MIT).
+MIT, see [LICENSE](LICENSE). Built on faster-whisper (MIT), sherpa-onnx (Apache-2.0), and OpenAI Whisper (MIT).
