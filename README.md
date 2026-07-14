@@ -33,7 +33,7 @@ Drag a recording onto the drop zone (m4a, mp3, wav, aac, flac, mp4, mov and most
 
 **Models:** small is the sweet spot for meetings; large-v3-turbo is noticeably better on crosstalk and jargon if you don't mind ~1.6 GB and slower runs; base for quick rough drafts.
 
-**Big files:** file size doesn't matter much (a 1.5 GB recording is fine) — length is what costs time. Rough guide on Apple Silicon: the small model transcribes about 5–10× faster than realtime, so a 2-hour meeting takes roughly 15–25 minutes plus a few minutes for speaker ID. A progress counter shows exactly where it is.
+**Big files:** file size doesn't matter much (a 1.5 GB recording is fine) — length is what costs time. Rough guide on Apple Silicon: the small model transcribes about 5 10× faster than realtime, so a 2-hour meeting takes roughly 15 25 minutes plus a few minutes for speaker ID. A progress counter shows exactly where it is.
 
 Transcripts save automatically to `~/Documents/MeetingScribe/`, one folder per recording, in three formats: `transcript.md` (speaker turns + plain text), `transcript.txt`, and `transcript.srt` (subtitles, speaker-prefixed).
 
